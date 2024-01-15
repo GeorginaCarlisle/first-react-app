@@ -5,6 +5,7 @@ import StatefulGreeting from './components/StatefulGreeting';
 import EventsClass from './components/EventsClass';
 import ConditionalRenderingFunctional from './components/ConditionalRenderingFunctional';
 import NestingComponents from './components/NestingComponents';
+import MethodsAsPropsParent from './components/MethodsAsPropsParent';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <EventsClass />
       <NestingComponents />
       <ConditionalRenderingFunctional connected={true}/>
+      <MethodsAsPropsParent />
     </div>
   );
 }
