@@ -3,6 +3,8 @@ import EventsFunctional from './components/EventsFunctional';
 import FunctionalGreeting from './components/FunctionalGreeting';
 import StatefulGreeting from './components/StatefulGreeting';
 import EventsClass from './components/EventsClass';
+import ConditionalRenderingClass from './components/ConditionalRenderingClass';
+import ConditionalRenderingFunctional from './components/ConditionalRenderingFunctional';
 
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <StatefulGreeting greeting="I'm a stateful component" name="Georgina"/>
       <EventsFunctional />
       <EventsClass />
+      <ConditionalRenderingClass />
+      <ConditionalRenderingFunctional connected={true}/>
     </div>
   );
 }
