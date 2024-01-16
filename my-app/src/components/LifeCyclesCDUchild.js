@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export class LifeCyclesCDUchild extends Component {
     constructor(props) {
-        console.log("Child constructor called")
+        //console.log("Child constructor called")
         super(props)
         
         this.state = {
@@ -11,7 +11,7 @@ export class LifeCyclesCDUchild extends Component {
     }
 
     updateGreeting = () => {
-        console.log("Child update Greeting called")
+        //console.log("Child update Greeting called")
         this.setState(prevState => {
             return {
                 greeting: prevState.greeting === 'Hello from the child!' ? 'Goodbye from the child' : 'Hello from the child!'
@@ -20,11 +20,11 @@ export class LifeCyclesCDUchild extends Component {
     }
     
     componentDidUpdate() {
-        console.log('Child Component updated')
+        //console.log('Child Component updated')
     }
 
     render() {
-        console.log('Child rendered')
+        //console.log('Child rendered')
         return (
         <div>
             <h2>{this.state.greeting}</h2>
