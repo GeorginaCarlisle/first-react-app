@@ -12,12 +12,15 @@ import LifeCyclesCDU from './components/LifeCyclesCDU';
 import LifeCyclesCWU from './components/LifeCyclesCWU';
 import ControlledForm from './components/ControlledForm';
 import UnControlledForm from './components/UnControlledForm';
+import HooksCounter from './components/HooksCounter';
+import FormWithHooks from './components/FormWithHooks';
 
 
 function App() {
   return (
     <div className="App">
       <FunctionalGreeting greeting="Hello fellow react coder!"/>
+      <HooksCounter name="Coder"/>
       <StatefulGreeting greeting="I'm a stateful component" name="Georgina"/>
       <EventsFunctional />
       <EventsClass />
@@ -28,7 +31,9 @@ function App() {
       <LifeCyclesCDM />
       <LifeCyclesCDU />
       <LifeCyclesCWU />
-      <ControlledForm />
+      {//<ControlledForm />
+      }
+      <FormWithHooks />
       <UnControlledForm />
     </div>
   );
