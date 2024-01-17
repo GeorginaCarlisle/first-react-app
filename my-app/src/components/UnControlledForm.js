@@ -3,41 +3,24 @@ import React, { Component } from 'react'
 export class ControlledForm extends Component {
     constructor(props) {
         super(props)
-        
-        this.state = {
-            name: '',
-            category: 'website',
-            comment: '',
-        }
+        this.inputName = React.createRef();
+        this.inputQuery = React.createRef();
+        this.inputComment = React.createRef();
     }
 
-    handleNameChange = (event) => {
-        this.setState({
-            name: event.target.value
-        });   
-    }
 
-    handleCommentChange = (event) => {
-        this.setState({
-            comment: event.target.value
-        })
-    }
-
-    handleSelectCategory = (event) => {
-        this.setState({
-            category: event.target.value
-        })
-    }
 
     handelSubmit = (event) => {
         event.preventDefault();
-        console.log(this.state);
+        console.log(`${this.inputName.current.name}: ${this.inputName.current.value}`);
+        console.log(`${this.inputQuery.current.name}: ${this.inputQuery.current.value}`);
+        console.log(`${this.inputComment.current.name}: ${this.inputComment.current.value}`);
     }
 
     render() {
         return (
             <div>
-                <h2>Please fill out the controlled form below</h2>
+                <h2>Please fill out the uncontrolled form below</h2>
                 <form onSubmit={this.handelSubmit}>
                     <div>
                         <label htmlFor="name">Your Name:</label>
@@ -45,13 +28,12 @@ export class ControlledForm extends Component {
                             type="text"
                             id="name"
                             name="name"
-                            value={this.state.name}
-                            onChange={this.handleNameChange}
+                            ref={this.inputName}
                         />
                     </div>
                     <div>
                         <label htmlFor='category'>Query category:</label>
-                        <select id='category' name='category' onChange={this.handleSelectCategory}>
+                        <select id='category' name='category' ref={this.inputQuery}>
                             <option value="website">Website issue</option>
                             <option value="order">Order issue</option>
                             <option value="general">General inquiry</option>
@@ -59,7 +41,7 @@ export class ControlledForm extends Component {
                     </div>
                     <div>
                         <label htmlFor='comments'>Comments:</label>
-                        <textarea id="comments" name="comments" onChange={this.handleCommentChange}/>
+                        <textarea id="comments" name="comments" ref={this.inputComment}/>
                     </div>
 
 
