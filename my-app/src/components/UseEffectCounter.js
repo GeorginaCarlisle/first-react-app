@@ -5,10 +5,18 @@ function UseEffectCounter() {
     useEffect(() => {
         document.title = count;
     }, [count]);
+
     const [count2, setCount2] = useState(0);
     useEffect(() => {
         document.title = count2;
     }, [count2]);
+
+    const [time, setTime] = useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(time => time + 1)
+        }, 1000);
+    }, []);
 
     return (
         <div>
@@ -21,8 +29,9 @@ function UseEffectCounter() {
             <h2>conditional effects used to prevent everything always updating regardless of what's needed</h2>
             <p>The second count is: <span>{count2}</span></p>
             <button onClick={
-                () => setCount2(count2 => count2 +1)
+                () => setCount2(count2 => count +1)
             }>Increase count 2</button>
+            <h3>Time is {time}</h3>
         </div>
     )
 }
