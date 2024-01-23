@@ -17,6 +17,7 @@ import FormWithHooks from './components/FormWithHooks';
 import UseStateWithArrays from './components/UseStateWithArrays';
 import UseStateWithObjects from './components/UseStateWithObjects';
 import UseEffectCounterContainer from './components/UseEffectCounterContainer';
+import HTTPRequests from './components/HTTPRequests';
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <UseStateWithArrays />
       <UseStateWithObjects />
       <UseEffectCounterContainer />
+      <HTTPRequests />
     </div>
   );
 }
