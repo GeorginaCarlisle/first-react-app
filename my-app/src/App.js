@@ -19,6 +19,7 @@ import UseStateWithObjects from './components/UseStateWithObjects';
 import UseEffectCounterContainer from './components/UseEffectCounterContainer';
 import HTTPRequests from './components/HTTPRequests';
 import HTTPPost from './components/HTTPPost';
+import HTTPHooks from './components/HTTPHooks';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
       <UseEffectCounterContainer />
       <HTTPRequests />
       <HTTPPost />
+      <HTTPHooks />
     </div>
   );
 }
